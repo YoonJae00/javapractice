@@ -2,6 +2,7 @@ package chap09;
 
 public class Meat extends Menu{
 
+
     private boolean penFlag;
 
     public Meat(){}

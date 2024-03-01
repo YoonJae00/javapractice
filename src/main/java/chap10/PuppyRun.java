@@ -9,6 +9,7 @@ public class PuppyRun {
     public static void main(String[] args) {
 
 
+
         Scanner sc = new Scanner(System.in);
         List<Dog> AL = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
@@ -37,21 +38,29 @@ public class PuppyRun {
         System.out.println("===========================");
 
         // 구 포함한 강아지가 몇마리인지 출력
-
-        String[] arrname = new String[5];
-        for (int i = 0; i < 5; i++) {
-            arrname[i] = AL.get(i).getName();
-        }
-        int num = 0;
-        for (int i = 0; i < arrname.length; i++) {
-            for (int j = 0; j < arrname[i].length(); j++) {
-                if (arrname[i].charAt(j) == '구') {
-                    System.out.println(arrname[i]);
-                    num++;
-                }
+        int cnt = 0;
+        for(int i = 0; i<AL.size();i++){
+            if(AL.get(i).getName().contains("구")){
+                System.out.println(AL.get(i));
+                cnt++;
             }
         }
-
-        System.out.println("총 마리 " + num);
+        System.out.println("cnt = " + cnt);
+//        // 구 포함한 강아지가 몇마리인지 출력
+//
+//        String[] arrname = new String[5];
+//        for (int i = 0; i < 5; i++) {
+//            arrname[i] = AL.get(i).getName();
+//        }
+//        int num = 0;
+//        for (int i = 0; i < arrname.length; i++) {
+//            for (int j = 0; j < arrname[i].length(); j++) {
+//                if (arrname[i].charAt(j) == '구') {
+//                    System.out.println(arrname[i]);
+//                    num++;
+//                }
+//            }
+//        }
+//        System.out.println("총 마리 " + num);
     }
 }
