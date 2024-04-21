@@ -8,9 +8,14 @@ public class COTEST01 {
 
 
     public int[] solution(String[] name, int[] yearning, String[][] photo) {
+        this.name = name;
+        this.yearning = yearning;
+        this.photo = photo;
         int[] answer = {};
         return answer;
     }
+
+
 
 
 
